@@ -45,6 +45,9 @@ def fibonacci2value(n: int):
 
 if __name__ == '__main__':
     while True:
-        input_n = int(input("------------pls enter integer------------>>>"))
-        fibonacci2print(input_n)
-        print(fibonacci2list(input_n))
+        try:
+            input_n = int(input("------------pls enter an integer------------>>>"))
+            fibonacci2print(input_n)
+            print(fibonacci2list(input_n))
+        except ValueError:
+            print("Oops!  That was no valid integer number.  Try again...")
